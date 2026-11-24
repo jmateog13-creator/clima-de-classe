@@ -1,7 +1,7 @@
-# 💬 Clima de classe
+# 💬 Busquem solucions (clima de classe)
 
-Tutoria per millorar el clima de l'aula (parlar a tort i a dret, no respectar el torn de paraula…). **No es fa amb mòbils:** el profe projecta les preguntes una a una i els alumnes escriuen les respostes en un full, sense nom.
+Tutoria per millorar el clima de l'aula (parlar a tort i a dret, torn de paraula…). **Sense mòbils:** el profe projecta les 10 preguntes alhora, totes a la mateixa pantalla, i els alumnes escriuen les respostes en un full, sense nom. Preguntes pensades per trobar solucions, no culpables.
 
-- `index.html`: presentació per al projector. Espai o → avança, ← torna, **T** engega el temporitzador de cada pregunta, **F** pantalla completa.
-- `full.html`: full per imprimir (una còpia per alumne) amb les 10 preguntes i espai per escriure.
-- `preguntes.json`: preguntes, temps de cada una i textos d'inici i final. Es pot editar.
+- `index.html`: les 10 preguntes a la vista, amb temporitzador (**T**) i pantalla completa (**F**).
+- `full.html`: full per imprimir amb les preguntes i espai per escriure.
+- `preguntes.json`: preguntes, subtítol i minuts del temporitzador. Es pot editar.
