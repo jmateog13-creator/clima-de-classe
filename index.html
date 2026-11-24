@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0e0b1f">
+<title>Clima de classe · Tutoria</title>
+<script>
+/* Enllaços directes: ?c=1234 → alumne (Moodle), ?codi=1234 o ?demo → profe */
+(() => {
+  const q = new URLSearchParams(location.search);
+  if (q.has('c')) location.replace('movil.html' + location.search);
+  else if (q.has('codi') || q.has('demo')) location.replace('profe.html' + location.search);
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800;900&family=Atkinson+Hyperlegible:wght@400;700&family=VT323&display=swap">
+<style>
+:root{--fons:#0e0b1f;--placa:#1b1636;--placa2:#262049;--linia:#352d63;--tinta:#f7f4ff;--suau:#b5acd9;--fosc:#0e0b1f;--g1:#ff3d81;--g2:#ffb03b;
+  --display:"Unbounded",ui-sans-serif,system-ui,sans-serif;--text:"Atkinson Hyperlegible",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;--osd:"VT323",ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;overflow-x:hidden}
+body{background:var(--fons);color:var(--tinta);font:400 18px/1.5 var(--text);min-height:100vh;display:grid;place-items:center;padding:24px 16px;
+  background-image:radial-gradient(90% 70% at 100% 0%,#ff3d8140,transparent 60%),radial-gradient(80% 70% at 0% 100%,#ffb03b33,transparent 60%)}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#ffffff06 0 2px,transparent 2px 4px)}
+main{width:min(760px,100%);display:flex;flex-direction:column;gap:26px;text-align:center;align-items:center}
+.osd{font-family:var(--osd);font-size:clamp(18px,5vw,26px);text-wrap:balance;letter-spacing:.06em;color:var(--suau)}
+h1{margin:0;font:900 clamp(36px,11vw,104px)/.95 var(--display);letter-spacing:-.04em}
+h1 span{background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--suau);max-width:46ch;margin:0}
+a.boto{display:flex;align-items:center;gap:22px;text-decoration:none;border-radius:24px;width:100%;text-align:left;transition:transform .08s,box-shadow .08s}
+a.boto:focus-visible{outline:4px solid var(--tinta);outline-offset:4px}
+a.boto .ic{font-size:56px;line-height:1;flex:none}
+a.boto b{display:block;font:900 clamp(30px,5.4vw,46px)/1.05 var(--display);letter-spacing:-.02em}
+a.boto small{display:block;font:700 17px/1.35 var(--text);opacity:.85;margin-top:6px}
+.alumne{background:linear-gradient(90deg,var(--g1),var(--g2));color:var(--fosc);padding:30px 32px;min-height:170px;box-shadow:0 8px 0 #0009}
+.alumne:active{transform:translateY(5px);box-shadow:0 3px 0 #0009}
+.alumne .fletxa{margin-left:auto;font:900 46px var(--display)}
+a.boto.profe{background:var(--placa);border:2px solid var(--linia);color:var(--tinta);padding:14px 22px;width:auto;margin-top:10px;align-self:center;gap:14px}
+.profe:hover{border-color:var(--suau)}
+a.boto.profe .ic{font-size:30px}
+a.boto.profe b{font-size:20px}
+a.boto.profe small{font-size:14px;margin-top:2px}
+.nota{color:var(--suau);font-size:15px;max-width:52ch;margin:0}
+@media (max-width:520px){.alumne{padding:24px 20px;gap:14px}a.boto .ic{font-size:40px}.alumne .fletxa{display:none}}
+</style>
+</head>
+<body>
+<main>
+  <span class="osd">● TUTORIA · MILLOREM LA CLASSE</span>
+  <h1>Clima de <span>classe</span></h1>
+  <a class="boto alumne" href="movil.html"><span class="ic">📱</span><span><b>Alumnes, entreu aquí</b><small>Poseu el codi de 4 números i escriviu amb sinceritat</small></span><span class="fletxa" aria-hidden="true">→</span></a>
+  <p class="nota">🔒 Anònim: cap resposta porta el teu nom. No cal registrar-se.</p>
+  <a class="boto profe" href="profe.html"><span class="ic">🧑‍🏫</span><span><b>Sóc el profe</b><small>Obrir la sala i projectar-la</small></span></a>
+</main>
+</body>
+</html>
