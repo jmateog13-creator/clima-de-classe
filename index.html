@@ -63,8 +63,8 @@ function pinta(){
     cap=`<button class="temps${ja?' fet':''}" id="temps" style="cursor:pointer" title="Pausa (P)">${ja?'✓ Fet':'⏱ '+mm(segons)}</button>`;
     peu=`<span>${i?'← Enrere':''}</span><span id="ajuda">${ja?'Espai: següent →':'Llegiu la pregunta · Espai o ▶ per engegar el temporitzador'}</span>`;
   } else {
-    cos=`<span class="osd">■ PUGEM-HO A LA PISSARRA</span><h1 style="font-size:clamp(34px,5vw,80px)">Ho posem <span>en comú</span></h1><ol class="llista">${D.preguntes.map(p=>`<li>${esc(p.text)}</li>`).join('')}</ol>`;
-    peu=`<span>← Enrere</span><span><a style="color:var(--g2)" href="full.html" target="_blank">🖨️ Full</a></span>`;
+    cos=`<span class="osd">■ FINAL</span><h1>Gràcies<span>.</span></h1>${D.final.map(x=>`<p class="frase">${esc(x)}</p>`).join('')}`;
+    peu=`<span>← Enrere</span><span></span>`;
   }
   $('#app').innerHTML=`<article class="diapo"><div class="cap"><span class="osd">▶ ${mm(i)} / ${String(tot).padStart(2,'0')}</span>${cap}</div>${cos}<div class="peu">${peu}</div><div class="barra" id="barra" style="width:${d.k==='q'&&!fet.has(i)?100:0}%"></div></article>`;
 }
