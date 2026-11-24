@@ -1,51 +1,65 @@
 {
   "titol": "Busquem solucions",
-  "subtitol": "Escriu al teu full, sense noms. No busquem culpables: busquem què podem fer perquè la classe funcioni millor.",
+  "subtitol": "Primer, què passa. Després, què ens ajudaria. Sense noms: no busquem culpables.",
   "preguntes": [
     {
-      "id": "be",
-      "text": "Pensa en un moment en què la classe ha anat bé: què era diferent?"
+      "id": "soroll",
+      "part": 1,
+      "text": "Quan a classe hi ha molt de soroll, què està passant exactament?"
+    },
+    {
+      "id": "jo",
+      "part": 1,
+      "text": "Quan no toca parlar, què fas tu? (parlar amb el del costat, riure, interrompre, fer el graciós…)"
     },
     {
       "id": "torn",
+      "part": 1,
+      "text": "Per què creus que de vegades no respectem el torn de paraula?"
+    },
+    {
+      "id": "callar",
+      "part": 1,
+      "text": "Què fa que et costi esperar o callar quan algú altre està parlant?"
+    },
+    {
+      "id": "efecte",
+      "part": 1,
+      "text": "Com creus que es senten el professor i els companys quan no els deixem parlar o fer classe?"
+    },
+    {
+      "id": "ajuda",
+      "part": 2,
       "text": "Què ens ajudaria a esperar el torn de paraula?"
     },
     {
       "id": "senyal",
+      "part": 2,
       "text": "Quina senyal o norma ens recordaria que toca callar? (per exemple, la mà aixecada)"
     },
     {
-      "id": "jo",
+      "id": "tu",
+      "part": 2,
       "text": "Què podries fer tu, la setmana que ve, perquè la classe vagi millor?"
     },
     {
-      "id": "callar",
-      "text": "Quan et costa més callar, què et podria ajudar? (canviar de lloc, respirar, apuntar-ho…)"
-    },
-    {
-      "id": "companys",
-      "text": "Què podem fer els companys quan algú interromp o fa el pallasso, sense ofendre ningú?"
-    },
-    {
-      "id": "moments",
-      "text": "Quines classes o moments són els més difícils? Què canviaries?"
-    },
-    {
       "id": "profes",
+      "part": 2,
       "text": "Què podrien fer els professors per ajudar-nos?"
     },
     {
-      "id": "consequencia",
-      "text": "Si algú es salta els acords, quina conseqüència seria justa?"
-    },
-    {
       "id": "acord",
+      "part": 2,
       "text": "Quin acord concret proposes per a tot el grup?"
     }
   ],
   "min": 3,
   "intro": [
-    "Agafa un full i escriu-hi, amb sinceritat, la resposta a cada pregunta.",
-    "Hi haurà una pregunta cada 3 minuts. No hi posis el teu nom ni el de cap company: no busquem culpables, busquem solucions."
-  ]
+    "Agafa un full i escriu-hi, amb sinceritat, la resposta a cada pregunta. Hi haurà una pregunta cada 3 minuts.",
+    "Primer, mirem què passa de veritat a la classe. Després, busquem què ens ajudaria. No hi posis el teu nom ni el de cap company: no busquem culpables."
+  ],
+  "parts": {
+    "1": "Què passa a la classe",
+    "2": "Què ens ajudaria"
+  }
 }

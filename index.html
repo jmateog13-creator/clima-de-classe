@@ -59,7 +59,7 @@ function pinta(){
     peu=`<span></span><span>Espai: següent →</span>`;
   } else if(d.k==='q'){
     total=minDe(d.p); const ja=fet.has(i); segons=ja?0:total;
-    cos=`<span class="num">${String(d.j+1).padStart(2,'0')} / ${String(D.preguntes.length).padStart(2,'0')}</span><p class="q">${esc(d.p.text)}</p>${ja?'':`<button class="btn play" id="play" data-play>▶ Play · ${Math.round(total/60*10)/10} min</button>`}`;
+    cos=`<span class="osd" style="color:var(--g2)">PART ${d.p.part} · ${esc((D.parts[d.p.part]||'').toUpperCase())}</span><span class="num">${String(d.j+1).padStart(2,'0')} / ${String(D.preguntes.length).padStart(2,'0')}</span><p class="q">${esc(d.p.text)}</p>${ja?'':`<button class="btn play" id="play" data-play>▶ Play · ${Math.round(total/60*10)/10} min</button>`}`;
     cap=`<button class="temps${ja?' fet':''}" id="temps" style="cursor:pointer" title="Pausa (P)">${ja?'✓ Fet':'⏱ '+mm(segons)}</button>`;
     peu=`<span>${i?'← Enrere':''}</span><span id="ajuda">${ja?'Espai: següent →':'Llegiu la pregunta · Espai o ▶ per engegar el temporitzador'}</span>`;
   } else {

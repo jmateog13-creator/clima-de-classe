@@ -10,6 +10,7 @@
 body{font:15px/1.4 "Atkinson Hyperlegible",system-ui,sans-serif;color:#111;margin:0 auto;max-width:190mm;padding:16px}
 h1{font-size:26px;margin:0 0 2px}
 .sub{color:#444;margin:0 0 14px;font-size:14px}
+h2{font-size:17px;margin:16px 0 0;color:#a3004a;break-after:avoid}
 .q{break-inside:avoid;margin:0 0 6px}
 .q b{display:block;margin-top:10px}
 .l{border-bottom:1px solid #999;height:24px}
@@ -26,7 +27,7 @@ button{font:inherit;padding:8px 16px;border-radius:8px;border:1px solid #333;bac
 <script>
 fetch('preguntes.json',{cache:'no-cache'}).then(r=>r.json()).then(D=>{
   document.getElementById('sub').textContent=D.subtitol;
-  document.getElementById('llista').innerHTML=D.preguntes.map((p,i)=>`<div class="q"><b>${i+1}. ${p.text.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</b><div class="l"></div><div class="l"></div></div>`).join('');
+  let ant=0; document.getElementById('llista').innerHTML=D.preguntes.map((p,i)=>{ const cap=p.part!==ant?`<h2>Part ${p.part} · ${D.parts[p.part]}</h2>`:''; ant=p.part; return cap+`<div class="q"><b>${i+1}. ${p.text.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}</b><div class="l"></div><div class="l"></div></div>`; }).join('');
 });
 </script>
 </body>
