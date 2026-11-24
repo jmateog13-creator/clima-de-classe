@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Full · Clima de classe</title>
+<style>
+@page{size:A4;margin:14mm 16mm}
+*{box-sizing:border-box}
+body{font:15px/1.4 "Atkinson Hyperlegible",system-ui,sans-serif;color:#111;margin:0 auto;max-width:190mm;padding:16px}
+h1{font-size:26px;margin:0 0 2px}
+.sub{color:#444;margin:0 0 14px;font-size:14px}
+.q{break-inside:avoid;margin:0 0 6px}
+.q b{display:block;margin-top:10px}
+.l{border-bottom:1px solid #999;height:24px}
+.bar{display:flex;gap:10px;margin-bottom:14px}
+button{font:inherit;padding:8px 16px;border-radius:8px;border:1px solid #333;background:#fff;cursor:pointer}
+@media print{.bar{display:none}body{padding:0}}
+</style>
+</head>
+<body>
+<div class="bar"><button onclick="print()">🖨️ Imprimir</button><span style="align-self:center;color:#555">Una còpia per alumne. Sense nom.</span></div>
+<h1>Clima de classe</h1>
+<p class="sub" id="sub"></p>
+<div id="llista"></div>
+<script>
+fetch('preguntes.json',{cache:'no-cache'}).then(r=>r.json()).then(D=>{
+  document.getElementById('sub').textContent='No hi posis el teu nom ni el de cap company. Escriu amb sinceritat: servirà per millorar la classe.';
+  document.getElementById('llista').innerHTML=D.preguntes.map((p,i)=>`<div class="q"><b>${i+1}. ${p.text.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}${p.nota?' <i>('+p.nota.toLowerCase()+')</i>':''}</b><div class="l"></div><div class="l"></div></div>`).join('');
+});
+</script>
+</body>
+</html>

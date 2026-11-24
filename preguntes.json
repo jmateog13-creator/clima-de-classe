@@ -1,15 +1,17 @@
 {
-  "versio": 1,
+  "titol": "Clima de classe",
+  "intro": ["Agafa un full i escriu-hi, amb sinceritat, la resposta a cada pregunta.", "No hi posis el teu nom ni el de cap company. Ningú no t'ho jutjarà: servirà per millorar la classe entre tots."],
+  "final": ["Plega el full sense nom.", "Amb el que heu escrit decidirem, entre tots, uns acords per millorar la classe."],
   "preguntes": [
-    { "id": "soroll", "tipus": "text", "text": "Quan a classe hi ha molt de soroll, què creus que està passant?", "diapo": { "frase": "Quan hi ha molt de soroll, {classe} diu que passa això" } },
-    { "id": "torn", "tipus": "text", "text": "Per què creus que de vegades no respectem el torn de paraula?", "diapo": { "frase": "Per què no respectem el torn de paraula?" } },
-    { "id": "clima", "tipus": "text", "text": "Creus que el clima de la classe és bo per aprendre? Per què?", "diapo": { "frase": "El clima de la classe és bo per aprendre?" } },
-    { "id": "moment", "tipus": "text", "text": "En quines classes o moments del dia és més difícil mantenir l'ordre? Per què?", "diapo": { "frase": "Quan és més difícil mantenir l'ordre?" } },
-    { "id": "molesta", "tipus": "text", "text": "Què és el que més et molesta del que passa a classe? (sense noms)", "diapo": { "frase": "Què és el que més molesta de la classe?" } },
-    { "id": "jo", "tipus": "text", "text": "Alguna vegada t'has portat malament tu? Què creus que t'hi va portar?", "diapo": { "frase": "Quan ens portem malament, què ens hi porta?" } },
-    { "id": "callar", "tipus": "text", "text": "Què fa que et costi esperar o callar quan algú altre està parlant?", "diapo": { "frase": "Què ens fa difícil esperar i callar?" } },
-    { "id": "escoltat", "tipus": "text", "text": "T'has sentit alguna vegada que no t'escoltaven o que no et deixaven parlar? Com va ser?", "diapo": { "frase": "Quan no ens han escoltat" } },
-    { "id": "profes", "tipus": "text", "text": "Què podrien fer els professors perquè el clima de la classe millorés?", "diapo": { "frase": "Què podrien fer els professors?" } },
-    { "id": "acord", "tipus": "text", "text": "Quina norma o acord concret hauríem de fer entre tots per millorar la classe?", "diapo": { "frase": "Quin acord podem fer entre tots?" } }
+    { "id": "soroll", "text": "Quan a classe hi ha molt de soroll, què creus que està passant?", "min": 2 },
+    { "id": "torn", "text": "Per què creus que de vegades no respectem el torn de paraula?", "min": 2 },
+    { "id": "clima", "text": "Creus que el clima de la classe és bo per aprendre? Per què?", "min": 2 },
+    { "id": "moment", "text": "En quines classes o moments del dia és més difícil mantenir l'ordre? Per què?", "min": 2 },
+    { "id": "molesta", "text": "Què és el que més et molesta del que passa a classe?", "nota": "Sense noms de companys.", "min": 2 },
+    { "id": "jo", "text": "Alguna vegada t'has portat malament tu? Què creus que t'hi va portar?", "min": 2 },
+    { "id": "callar", "text": "Què fa que et costi esperar o callar quan algú altre està parlant?", "min": 2 },
+    { "id": "escoltat", "text": "T'has sentit alguna vegada que no t'escoltaven o que no et deixaven parlar? Com va ser?", "min": 2 },
+    { "id": "profes", "text": "Què podrien fer els professors perquè el clima de la classe millorés?", "min": 2 },
+    { "id": "acord", "text": "Quina norma o acord concret hauríem de fer entre tots per millorar la classe?", "min": 3 }
   ]
 }
